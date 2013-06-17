@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h1>Get in touch with us!</h1>
+  <h5>Please complete the form below with your contact details and your query.
+         We will be in touch with you very shortly with more details on how we can help you provide better
+          care for your loved one.</h5>
+</div>
+
+
+
+<%= form_for @message, :id => "contact", :url => contact_path do |form| %>
+  <fieldset class="fields">
+    <div class="field">
+      <%= form.label :"Please enter your full name" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :"email address" %>
+      <%= form.text_field :email %>
+    </div>
+    <div class="field">
+      <%= form.label :subject %>
+      <%= form.text_field :subject %>
+    </div>
+
+    <div class="field">
+      <%= form.label :"Talk to us" %>
+      <%= form.text_area :body %>
+    </div>
+  </fieldset>
+
+  <fieldset class="actions">
+    <%= form.submit "Send" %>
+  </fieldset>
+<% end %>
